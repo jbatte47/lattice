@@ -4,51 +4,9 @@ title: "[Primitive]: "
 labels: ["type:primitive", "area:primitives"]
 body:
   - type: textarea
-    id: description
+    id: summary
     attributes:
-      label: Description
-      description: What structural problem does this primitive solve?
-    validations:
-      required: true
-  - type: textarea
-    id: role
-    attributes:
-      label: Intended role in Lattice
-      description: Why does this belong in Lattice rather than higher in the product stack?
-    validations:
-      required: true
-  - type: textarea
-    id: api
-    attributes:
-      label: Proposed API
-      description: Props, variants, sizes, controlled/uncontrolled behavior.
-    validations:
-      required: true
-  - type: textarea
-    id: variants
-    attributes:
-      label: Variants
-      description: Explicit list of supported variants. If a variant is not listed, it does not exist.
-    validations:
-      required: true
-  - type: textarea
-    id: states
-    attributes:
-      label: States
-      description: At minimum: default, hover, focus-visible, disabled, and loading (if applicable).
-    validations:
-      required: true
-  - type: textarea
-    id: a11y
-    attributes:
-      label: Accessibility checklist
-      description: Include keyboard operability, focus-visible behavior, ARIA requirements (or "none"), and screen reader expectations.
-    validations:
-      required: true
-  - type: textarea
-    id: nongoals
-    attributes:
-      label: Non-goals
-      description: Explicitly document what this component will not do.
+      label: Summary
+      description: Short description of the primitive and why it belongs in Lattice.
     validations:
       required: true
