@@ -54,13 +54,9 @@ body:
       label: Accessibility checklist
       options:
         - label: Keyboard operability
-          required: true
         - label: Focus-visible behavior defined
-          required: true
         - label: ARIA requirements specified (or "none")
-          required: true
         - label: Screen reader expectations documented
-          required: true
   - type: textarea
     id: nongoals
     attributes:

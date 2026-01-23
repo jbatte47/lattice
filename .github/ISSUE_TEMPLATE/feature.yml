@@ -30,8 +30,8 @@ body:
     attributes:
       label: Backward compatibility
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: textarea
