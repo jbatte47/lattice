@@ -32,9 +32,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: states
+    id: nongoals
     attributes:
-      label: States
-      description: At minimum: default, hover, focus-visible, disabled, and loading (if applicable).
+      label: Non-goals
+      description: Explicitly document what this component will not do.
     validations:
       required: true
