@@ -45,3 +45,10 @@ body:
       description: List required states (default, hover, focus, disabled, loading if applicable).
     validations:
       required: true
+  - type: textarea
+    id: a11y
+    attributes:
+      label: Accessibility checklist
+      description: Include keyboard operability, focus-visible behavior, ARIA requirements (or "none"), and screen reader expectations.
+    validations:
+      required: true
