@@ -48,15 +48,11 @@ body:
       description: At minimum: default, hover, focus-visible, disabled, and loading (if applicable).
     validations:
       required: true
-  - type: checkboxes
+  - type: textarea
     id: a11y
     attributes:
       label: Accessibility checklist
-      options:
-        - label: Keyboard operability
-        - label: Focus-visible behavior defined
-        - label: ARIA requirements specified (or "none")
-        - label: Screen reader expectations documented
+      description: Include keyboard operability, focus-visible behavior, ARIA requirements (or "none"), and screen reader expectations.
     validations:
       required: true
   - type: textarea
