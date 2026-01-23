@@ -38,3 +38,10 @@ body:
       description: Explicitly document what this component will not do.
     validations:
       required: true
+  - type: textarea
+    id: states
+    attributes:
+      label: States
+      description: List required states (default, hover, focus, disabled, loading if applicable).
+    validations:
+      required: true
