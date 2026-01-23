@@ -10,3 +10,10 @@ body:
       description: Short description of the primitive and why it belongs in Lattice.
     validations:
       required: true
+  - type: textarea
+    id: role
+    attributes:
+      label: Intended role in Lattice
+      description: Why does this belong in Lattice rather than higher in the product stack?
+    validations:
+      required: true
