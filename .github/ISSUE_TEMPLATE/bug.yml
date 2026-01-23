@@ -1,0 +1,31 @@
+name: Bug report
+description: Regression or incorrect behavior in existing components or infrastructure.
+title: "[Bug]: "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include minimal steps to reproduce the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected components or systems
+      description: List primitives, tokens, tooling, or other areas impacted.
+    validations:
+      required: true

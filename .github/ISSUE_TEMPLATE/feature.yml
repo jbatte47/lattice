@@ -1,0 +1,43 @@
+name: Feature / system change
+description: Foundational or architectural change (tokens, theming, Tailwind adapter, tooling).
+title: "[Feature]: "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What limitation or issue exists today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change
+      description: High-level description of the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on existing primitives
+      description: Identify any affected components or APIs.
+      placeholder: "If none, say 'none'."
+    validations:
+      required: true
+  - type: dropdown
+    id: backward
+    attributes:
+      label: Backward compatibility
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: textarea
+    id: migration
+    attributes:
+      label: Migration notes
+      description: Required even if the answer is "none."
+    validations:
+      required: true
