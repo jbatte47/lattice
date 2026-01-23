@@ -51,7 +51,7 @@ body:
     id: states
     attributes:
       label: States
-      description: List required states (default, hover, focus, disabled, loading if applicable).
+      description: "At minimum: default, hover, focus-visible, disabled, and loading (if applicable)."
     validations:
       required: true
   - type: textarea
