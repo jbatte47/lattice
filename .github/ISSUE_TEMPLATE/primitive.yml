@@ -26,6 +26,11 @@ body:
     attributes:
       label: Proposed API
       description: Props, variants, sizes, controlled/uncontrolled behavior.
+      placeholder: |
+        Example:
+        - size: sm | md | lg
+        - variant: solid | outline
+        - value/onChange (controlled)
     validations:
       required: true
   - type: textarea
