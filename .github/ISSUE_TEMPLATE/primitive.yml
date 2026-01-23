@@ -24,3 +24,10 @@ body:
       description: Props, variants, sizes, controlled/uncontrolled behavior.
     validations:
       required: true
+  - type: textarea
+    id: variants
+    attributes:
+      label: Variants
+      description: Explicit list of supported variants. If a variant is not listed, it does not exist.
+    validations:
+      required: true
