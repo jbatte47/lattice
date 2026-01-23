@@ -3,6 +3,10 @@ description: Propose or modify a Lattice primitive.
 title: "[Primitive]: "
 labels: ["type:primitive", "area:primitives"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Lattice primitives must be small, compositional, and domain-agnostic. If a component feels like it knows too much, it likely belongs higher in the stack.
   - type: textarea
     id: summary
     attributes:
