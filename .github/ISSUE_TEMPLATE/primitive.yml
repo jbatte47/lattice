@@ -31,3 +31,10 @@ body:
       description: Explicit list of supported variants. If a variant is not listed, it does not exist.
     validations:
       required: true
+  - type: textarea
+    id: states
+    attributes:
+      label: States
+      description: At minimum: default, hover, focus-visible, disabled, and loading (if applicable).
+    validations:
+      required: true
