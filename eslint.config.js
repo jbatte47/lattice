@@ -12,18 +12,22 @@ export default [
   ...tseslint.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    ...react.configs['flat/recommended'],
     plugins: {
-      react,
+      ...(react.configs['flat/recommended']?.plugins ?? { react }),
       'react-hooks': reactHooks,
     },
     settings: {
+      ...(react.configs['flat/recommended']?.settings ?? {}),
       react: {
+        ...(react.configs['flat/recommended']?.settings?.react ?? {}),
         version: 'detect',
       },
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      ...(react.configs['flat/recommended']?.rules ?? {}),
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
   prettier,
