@@ -22,6 +22,7 @@ export default [
       },
     },
     rules: {
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
     },
   },
