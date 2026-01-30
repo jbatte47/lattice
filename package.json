@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "pnpm lint -- --fix",
-    "format": "prettier --check .",
-    "format:write": "prettier --write ."
+  "lint": "eslint .",
+  "lint:fix": "pnpm lint -- --fix",
+  "format": "prettier --check .",
+  "format:write": "prettier --write ."
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
