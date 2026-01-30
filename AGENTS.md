@@ -81,6 +81,7 @@ gh auth refresh -h github.com -s project
 ### 5) Notes
 
 - `sandbox/` is gitignored and is the canonical staging area for issue bodies.
+- Store transient artifacts (exports, local snapshots, scratch JSON, etc.) in `sandbox/` to avoid polluting git history.
 - Always prefer adding more issues over bloating a single issue.
 - Do not skip milestones or project assignment.
 
