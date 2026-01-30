@@ -33,4 +33,4 @@ Lattice releases are fully automated via semantic-release. Any commit merged int
 - If no release-worthy commits are detected, semantic-release exits without publishing.
 - If a release fails, fix the issue and re-run the workflow; no manual versioning is needed.
 - No `NPM_TOKEN` secret is required when using trusted publishing.
- - Publishing uses the npm CLI via semantic-release exec (OIDC-based).
+- Publishing uses the npm CLI via semantic-release exec (OIDC-based).
