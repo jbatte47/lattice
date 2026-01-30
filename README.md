@@ -104,6 +104,46 @@ Lattice is currently in early development. APIs, component sets, and conventions
 
 ---
 
-## License
+## Development & Contribution
 
-TBD
+### Branch Management
+We follow **Trunk-Based Development**. All development happens in short-lived feature branches that are merged into `main` after review.
+
+- **Branch Naming**: Use semantic prefixes followed by the issue number and a short description.
+    - `feat/<issue-number>-<description>` (e.g., `feat/2-lint-setup`)
+    - `fix/<issue-number>-<description>`
+    - `chore/<issue-number>-<description>`
+    - `docs/<issue-number>-<description>`
+
+### Commit Message Conventions
+Commit messages must be clear and concise. Always reference the relevant GitHub issue number in the footer or subject line.
+
+- **Pattern**: `<type>(<scope>): <description> <issue-reference>`
+- **Example**: `feat(tooling): add pnpm workspace configuration. Fixes #1`
+
+### Tooling (Lint + Format)
+Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
+
+- **Lint**: `pnpm lint`
+- **Lint (fix)**: `pnpm lint:fix`
+- **Format**: `pnpm format`
+- **Format (write)**: `pnpm format:write`
+
+### Editor Setup (VS Code)
+Recommended extensions:
+- **ESLint**
+- **Prettier - Code formatter**
+
+Recommended workspace settings:
+```
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
+
+### Versioning
+Lattice follows **Semantic Versioning (SemVer)**. Major, minor, and patch updates are determined by the impact of changes on the public API of the structural primitives.
