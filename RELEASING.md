@@ -19,6 +19,7 @@ Lattice releases are fully automated via semantic-release. Any commit merged int
 3. The `Release` workflow runs and, if needed, publishes:
    - GitHub release notes
    - npm package publish
+   - package.json version is updated during the release job (not committed)
 
 ## Trusted publishing setup (OIDC)
 
@@ -32,3 +33,4 @@ Lattice releases are fully automated via semantic-release. Any commit merged int
 - If no release-worthy commits are detected, semantic-release exits without publishing.
 - If a release fails, fix the issue and re-run the workflow; no manual versioning is needed.
 - No `NPM_TOKEN` secret is required when using trusted publishing.
+ - Publishing uses the npm CLI via semantic-release exec (OIDC-based).
