@@ -129,6 +129,12 @@ Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
 - **Format**: `pnpm format`
 - **Format (write)**: `pnpm format:write`
 
+### Build + Typecheck
+To validate TypeScript types and produce build artifacts:
+
+- **Typecheck**: `pnpm typecheck`
+- **Build**: `pnpm build`
+
 ### Editor Setup (VS Code)
 Recommended extensions:
 - **ESLint**
