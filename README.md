@@ -121,6 +121,20 @@ Commit messages must be clear and concise. Always reference the relevant GitHub 
 - **Pattern**: `<type>(<scope>): <description> <issue-reference>`
 - **Example**: `feat(tooling): add pnpm workspace configuration. Fixes #1`
 
+### Pull Request Description
+PR descriptions must follow this format and include the issue link that will be closed on merge:
+
+```
+## Summary
+- <summary bullet 1>
+- <summary bullet 2>
+
+## Testing
+- <what you ran or why not>
+
+Fixes #<issue-number>
+```
+
 ### Tooling (Lint + Format)
 Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
 
