@@ -1,7 +1,7 @@
 name: Bug report
 description: Regression or incorrect behavior in existing components or infrastructure.
-title: "[Bug]: "
-labels: ["type:bug"]
+title: '[Bug]: '
+labels: ['type:bug']
 body:
   - type: textarea
     id: expected

@@ -1,7 +1,7 @@
 name: Spike / exploration
 description: Research, investigation, or proof-of-concept work.
-title: "[Spike]: "
-labels: ["type:spike"]
+title: '[Spike]: '
+labels: ['type:spike']
 body:
   - type: textarea
     id: question
