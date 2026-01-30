@@ -1,7 +1,7 @@
 name: Feature / system change
 description: Foundational or architectural change (tokens, theming, Tailwind adapter, tooling).
-title: "[Feature]: "
-labels: ["type:feature"]
+title: '[Feature]: '
+labels: ['type:feature']
 body:
   - type: textarea
     id: problem
@@ -30,8 +30,8 @@ body:
     attributes:
       label: Backward compatibility
       options:
-        - "Yes"
-        - "No"
+        - 'Yes'
+        - 'No'
     validations:
       required: true
   - type: textarea

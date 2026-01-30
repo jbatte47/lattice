@@ -29,7 +29,7 @@ Lattice is built on a few core ideas:
 - A collection of **UI primitives** (e.g. Button, Input, Stack, Text)
 - A **semantic token system** built on CSS variables
 - A **Tailwind-based implementation** with strict conventions
-- A foundation for building your *own* product design systems
+- A foundation for building your _own_ product design systems
 
 ## What Lattice Is Not
 
@@ -94,7 +94,7 @@ Lattice primitives
 Design tokens
 ```
 
-Teams are encouraged to build their own design systems *on top of* Lattice, extending it without modifying its core principles.
+Teams are encouraged to build their own design systems _on top of_ Lattice, extending it without modifying its core principles.
 
 ---
 
@@ -107,21 +107,24 @@ Lattice is currently in early development. APIs, component sets, and conventions
 ## Development & Contribution
 
 ### Branch Management
+
 We follow **Trunk-Based Development**. All development happens in short-lived feature branches that are merged into `main` after review.
 
 - **Branch Naming**: Use semantic prefixes followed by the issue number and a short description.
-    - `feat/<issue-number>-<description>` (e.g., `feat/2-lint-setup`)
-    - `fix/<issue-number>-<description>`
-    - `chore/<issue-number>-<description>`
-    - `docs/<issue-number>-<description>`
+  - `feat/<issue-number>-<description>` (e.g., `feat/2-lint-setup`)
+  - `fix/<issue-number>-<description>`
+  - `chore/<issue-number>-<description>`
+  - `docs/<issue-number>-<description>`
 
 ### Commit Message Conventions
+
 Commit messages must be clear and concise. Always reference the relevant GitHub issue number in the footer or subject line.
 
 - **Pattern**: `<type>(<scope>): <description> <issue-reference>`
 - **Example**: `feat(tooling): add pnpm workspace configuration. Fixes #1`
 
 ### Pull Request Description
+
 PR descriptions must follow this format and include the issue link that will be closed on merge:
 
 ```
@@ -136,6 +139,7 @@ Fixes #<issue-number>
 ```
 
 ### Tooling (Lint + Format)
+
 Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
 
 - **Lint**: `pnpm lint`
@@ -144,17 +148,21 @@ Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
 - **Format (write)**: `pnpm format:write`
 
 ### Build + Typecheck
+
 To validate TypeScript types and produce build artifacts:
 
 - **Typecheck**: `pnpm typecheck`
 - **Build**: `pnpm build`
 
 ### Editor Setup (VS Code)
+
 Recommended extensions:
+
 - **ESLint**
 - **Prettier - Code formatter**
 
 Recommended workspace settings:
+
 ```
 {
   "editor.formatOnSave": true,
@@ -166,4 +174,5 @@ Recommended workspace settings:
 ```
 
 ### Versioning
+
 Lattice follows **Semantic Versioning (SemVer)**. Major, minor, and patch updates are determined by the impact of changes on the public API of the structural primitives.

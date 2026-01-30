@@ -1,7 +1,7 @@
 name: Primitive component
 description: Propose or modify a Lattice primitive.
-title: "[Primitive]: "
-labels: ["type:primitive", "area:primitives"]
+title: '[Primitive]: '
+labels: ['type:primitive', 'area:primitives']
 body:
   - type: markdown
     attributes:
@@ -51,7 +51,7 @@ body:
     id: states
     attributes:
       label: States
-      description: "At minimum: default, hover, focus-visible, disabled, and loading (if applicable)."
+      description: 'At minimum: default, hover, focus-visible, disabled, and loading (if applicable).'
     validations:
       required: true
   - type: textarea
