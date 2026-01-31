@@ -39,6 +39,9 @@ jobs:
       - name: Format
         run: pnpm format
 
+      - name: Generate tokens
+        run: pnpm build:tokens
+
       - name: Typecheck
         run: pnpm typecheck
 
