@@ -21,6 +21,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./tailwind-preset": {
+      "types": "./dist/tailwind/preset.d.ts",
+      "import": "./dist/tailwind/preset.js",
+      "require": "./dist/tailwind/preset.cjs"
     }
   },
   "files": [
