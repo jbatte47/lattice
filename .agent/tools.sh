@@ -223,6 +223,8 @@ function gh_pr_create_and_mark_review() {
     return 1
   fi
 
+  git push -u origin "${branch}"
+
   local pr_title="${type}(${scope}): ${description}"
   local pr_body
   pr_body=$(
