@@ -1,0 +1,22 @@
+declare const styles: {
+  readonly playground: string;
+  readonly header: string;
+  readonly kicker: string;
+  readonly title: string;
+  readonly description: string;
+  readonly grid: string;
+  readonly card: string;
+  readonly layerCard: string;
+  readonly sectionTitle: string;
+  readonly meta: string;
+  readonly buttonRow: string;
+  readonly button: string;
+  readonly buttonWarning: string;
+  readonly buttonDanger: string;
+  readonly badge: string;
+  readonly layerWrapper: string;
+  readonly layerSurface: string;
+  readonly tailwindBlock: string;
+  readonly code: string;
+};
+export default styles;

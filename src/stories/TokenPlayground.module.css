@@ -1,0 +1,131 @@
+.playground {
+  display: grid;
+  gap: var(--lt-spacing-space-stack-loose);
+  padding: var(--lt-spacing-space-stack-loose);
+  background: var(--lt-color-bg-layer-0);
+  color: var(--lt-color-text-primary);
+  font-family: var(--lt-typography-type-body-font-family);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: var(--lt-color-text-muted);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+  color: var(--lt-color-text-secondary);
+}
+
+.grid {
+  display: grid;
+  gap: var(--lt-spacing-space-stack-default);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--lt-color-bg-layer-1);
+  border: 1px solid var(--lt-color-border-subtle);
+  border-radius: 16px;
+  padding: var(--lt-spacing-space-inset-default);
+  box-shadow: var(--lt-elevation-elevation-raised);
+  display: grid;
+  gap: var(--lt-spacing-space-stack-tight);
+}
+
+.layerCard {
+  background: var(--lt-color-bg-layer-2);
+}
+
+.sectionTitle {
+  font-weight: 600;
+  margin: 0;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--lt-color-text-muted);
+  margin: 0;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--lt-color-text-on-intent);
+  background: var(--lt-color-intent-primary);
+  box-shadow: var(--lt-elevation-elevation-raised);
+}
+
+.buttonWarning {
+  background: var(--lt-color-intent-warning);
+}
+
+.buttonDanger {
+  background: var(--lt-color-intent-danger);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lt-color-text-on-intent);
+  background: var(--lt-color-intent-info);
+}
+
+.layerWrapper {
+  padding: var(--lt-spacing-space-inset-default);
+  border-radius: 16px;
+  border: 1px dashed var(--lt-color-border-strong);
+  background: var(--lt-color-bg-layer-0);
+  display: grid;
+  gap: var(--lt-spacing-space-stack-default);
+}
+
+.layerSurface {
+  border-radius: 14px;
+  padding: var(--lt-spacing-space-inset-default);
+  background: var(--lt-color-bg-layer-1);
+  border: 1px solid var(--lt-color-border-subtle);
+}
+
+.tailwindBlock {
+  border-radius: 16px;
+  border: 1px solid var(--lt-color-border-subtle);
+  padding: var(--lt-spacing-space-inset-default);
+  background: var(--lt-color-bg-surface-default);
+  display: grid;
+  gap: 8px;
+}
+
+.code {
+  font-family: var(--lt-typography-type-caption-font-family);
+  font-size: 12px;
+  color: var(--lt-color-text-muted);
+}

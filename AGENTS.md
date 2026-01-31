@@ -85,6 +85,66 @@ gh auth refresh -h github.com -s project
 - Always prefer adding more issues over bloating a single issue.
 - Do not skip milestones or project assignment.
 
+## Item Detail Retrieval (Authoritative)
+
+When retrieving details for an item (issue, PR, etc.), use the helper functions in `.agent/tools.sh` instead of ad-hoc `gh` commands.
+
+### Required method
+
+1. Source the helper script:
+
+```
+source .agent/tools.sh
+```
+
+2. Use the `gh_issue_full` function to fetch full issue details (includes project placement):
+
+```
+gh_issue_full <issue_number> [repo_name]
+```
+
+### Notes
+
+- `gh_issue_full` resolves the authenticated GitHub username via `gh api user --jq .login`.
+- Use `--owner @me` only when explicitly passing the `--owner` flag to `gh`.
+
+## Branching Workflow (Authoritative)
+
+When starting work on an issue, use the helper functions in `.agent/tools.sh` instead of custom or one-off git/gh commands.
+
+### Required method
+
+1. Source the helper script:
+
+```
+source .agent/tools.sh
+```
+
+2. Create or switch to the correct short-lived branch:
+
+```
+gh_branch_start <scope> <issue_number> <description>
+```
+
+### Notes
+
+- `gh_branch_start` will safely stash dirty work, update `main`, create/switch the branch, and restore the stash.
+- Preferred scopes are `feat`, `fix`, `chore`, and `docs`.
+
+## Preferred Helper Commands (Authoritative)
+
+Use these `.agent/tools.sh` functions instead of custom or one-off commands whenever possible.
+
+### GitHub helpers
+
+- `gh_me_login`
+- `gh_issue_full`
+- `gh_issue_set_project_status`
+
+### Git helpers
+
+- `gh_branch_start`
+
 ## MCP Servers
 
 - Use MCP servers when available for GitHub operations (issues, milestones, projects) instead of the `gh` CLI.

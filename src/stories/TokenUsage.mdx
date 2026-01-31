@@ -1,0 +1,97 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Token Usage" />
+
+# Token usage rules
+
+Lattice tokens are the source of truth for color, spacing, typography, and elevation. Use semantic
+names that describe intent, not raw values. This keeps components consistent and keeps them easy to
+retarget when themes change.
+
+### Naming conventions
+
+- Use the semantic hierarchy defined in Issue #9 (color, spacing, typography, elevation).
+- Prefer intent-based tokens (for example `text-primary`, `bg-surface-default`).
+- Avoid raw values in components (for example `#ffffff`, `16px`, `box-shadow: 0 2px 4px`).
+
+### Dos and donts
+
+Correct (semantic token):
+
+```tsx
+<div className="bg-surface-default text-primary">
+  ...
+</div>
+```
+
+Incorrect (raw value):
+
+```tsx
+<div style={{ background: '#ffffff', color: '#22252a' }}>
+  ...
+</div>
+```
+
+### Enforcement
+
+- Review for raw values in CSS, inline styles, and component props.
+- Prefer tokens in design reviews and code review checklists.
+- If a token does not exist, add it before landing UI that depends on it.
+
+### Mapping guide
+
+Token groups map cleanly to CSS variables and Tailwind classes.
+
+<table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '16px' }}>
+  <thead>
+    <tr style={{ borderBottom: '2px solid var(--lt-color-border-subtle)' }}>
+      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>Token intent</th>
+      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>CSS variable</th>
+      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>Tailwind class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{ borderBottom: '1px solid var(--lt-color-border-subtle)' }}>
+      <td style={{ padding: '12px' }}>Surface</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>--lt-color-bg-surface-default</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>bg-surface-default</td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--lt-color-border-subtle)' }}>
+      <td style={{ padding: '12px' }}>Text</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>--lt-color-text-primary</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>text-primary</td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--lt-color-border-subtle)' }}>
+      <td style={{ padding: '12px' }}>Border</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>--lt-color-border-subtle</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>border-subtle</td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--lt-color-border-subtle)' }}>
+      <td style={{ padding: '12px' }}>Spacing</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>--lt-spacing-space-inset-default</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>p-space-inset-default</td>
+    </tr>
+    <tr style={{ borderBottom: '1px solid var(--lt-color-border-subtle)' }}>
+      <td style={{ padding: '12px' }}>Elevation</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>--lt-elevation-elevation-raised</td>
+      <td style={{ padding: '12px', fontFamily: 'monospace' }}>shadow-elevation-raised</td>
+    </tr>
+  </tbody>
+</table>
+
+### Example usage
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '16px' }}>
+  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Surface</div>
+    <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>bg-surface-default</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Text</div>
+    <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>text-primary</code>
+  </div>
+  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Border</div>
+    <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>border-subtle</code>
+  </div>
+</div>
