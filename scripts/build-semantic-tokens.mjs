@@ -1,11 +1,12 @@
 /* global console */
 import { readFile, writeFile } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = resolve(new URL('..', import.meta.url).pathname);
-const dataPath = resolve(root, 'tokens/semantic-tokens.json');
-const jsPath = resolve(root, 'tokens/semantic-tokens.js');
-const dtsPath = resolve(root, 'tokens/semantic-tokens.d.ts');
+const rootUrl = new URL('..', import.meta.url);
+const dataPath = fileURLToPath(new URL('tokens/semantic-tokens.json', rootUrl));
+const jsPath = fileURLToPath(new URL('tokens/semantic-tokens.js', rootUrl));
+const dtsPath = fileURLToPath(new URL('tokens/semantic-tokens.d.ts', rootUrl));
 
 const data = JSON.parse(await readFile(dataPath, 'utf8'));
 
