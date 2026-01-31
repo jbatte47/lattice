@@ -108,11 +108,11 @@ Lattice is currently in early development. APIs, component sets, and conventions
 
 ### Getting Started
 
-Run the token generator once before your first build or typecheck so Tailwind + types have the generated token artifacts available.
+Run the build once before your first typecheck so Tailwind + types have the generated token artifacts available.
 
 ```
 pnpm install
-pnpm build:tokens
+pnpm build
 ```
 
 ### Branch Management
