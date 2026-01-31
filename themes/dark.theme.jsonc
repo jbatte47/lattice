@@ -1,6 +1,8 @@
 {
   "$schema": "./theme.schema.json",
   // Dark Lattice theme (semantic tokens only).
+  // Note: runtime values come from src/theme/darkTheme.ts; spacing/typography/elevation
+  // mirror defaults for schema completeness.
   "color": {
     "semantic": {
       "text-primary": "#f7f7f8",
@@ -105,21 +107,21 @@
         "spread": { "value": 0, "unit": "px" },
       },
       "elevation-raised": {
-        "color": "rgba(0, 0, 0, 0.1)",
+        "color": "rgba(255, 255, 255, 0.04)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 1, "unit": "px" },
         "blur": { "value": 2, "unit": "px" },
         "spread": { "value": 0, "unit": "px" },
       },
       "elevation-overlay": {
-        "color": "rgba(0, 0, 0, 0.1)",
+        "color": "rgba(255, 255, 255, 0.06)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 3, "unit": "px" },
         "blur": { "value": 6, "unit": "px" },
         "spread": { "value": 0, "unit": "px" },
       },
       "elevation-modal": {
-        "color": "rgba(0, 0, 0, 0.2)",
+        "color": "rgba(255, 255, 255, 0.08)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 6, "unit": "px" },
         "blur": { "value": 12, "unit": "px" },

@@ -28,12 +28,49 @@ const darkColors = {
   'text-on-intent': '#ffffff',
 } as const;
 
+const darkElevations = {
+  'elevation-flat': {
+    color: 'rgba(0, 0, 0, 0)',
+    offsetX: { value: 0, unit: 'px' },
+    offsetY: { value: 0, unit: 'px' },
+    blur: { value: 0, unit: 'px' },
+    spread: { value: 0, unit: 'px' },
+  },
+  'elevation-raised': {
+    color: 'rgba(255, 255, 255, 0.04)',
+    offsetX: { value: 0, unit: 'px' },
+    offsetY: { value: 1, unit: 'px' },
+    blur: { value: 2, unit: 'px' },
+    spread: { value: 0, unit: 'px' },
+  },
+  'elevation-overlay': {
+    color: 'rgba(255, 255, 255, 0.06)',
+    offsetX: { value: 0, unit: 'px' },
+    offsetY: { value: 3, unit: 'px' },
+    blur: { value: 6, unit: 'px' },
+    spread: { value: 0, unit: 'px' },
+  },
+  'elevation-modal': {
+    color: 'rgba(255, 255, 255, 0.08)',
+    offsetX: { value: 0, unit: 'px' },
+    offsetY: { value: 6, unit: 'px' },
+    blur: { value: 12, unit: 'px' },
+    spread: { value: 0, unit: 'px' },
+  },
+} as const;
+
 export const darkTheme: Theme = {
   ...defaultTheme,
   color: {
     semantic: {
       ...defaultTheme.color.semantic,
       ...darkColors,
+    },
+  },
+  elevation: {
+    semantic: {
+      ...defaultTheme.elevation.semantic,
+      ...darkElevations,
     },
   },
 };

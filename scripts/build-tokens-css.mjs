@@ -1,6 +1,7 @@
 /* global URL, console */
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const { defaultTheme, darkTheme, themeToCssVars } = await import(
   new URL('../dist/index.js', import.meta.url).href
@@ -16,8 +17,9 @@ const darkVars = themeToCssVars(darkTheme);
 
 const css = `${toCssBlock(':root', lightVars)}\n\n${toCssBlock("[data-theme='dark']", darkVars)}\n`;
 const outPath = new URL('../dist/tokens.css', import.meta.url);
+const outFilePath = fileURLToPath(outPath);
 
-await mkdir(dirname(outPath.pathname), { recursive: true });
-await writeFile(outPath, css, 'utf8');
+await mkdir(dirname(outFilePath), { recursive: true });
+await writeFile(outFilePath, css, 'utf8');
 
 console.log('Generated dist/tokens.css');
