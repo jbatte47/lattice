@@ -167,19 +167,10 @@
     "typography": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "fontFamily",
-        "fontSize",
-        "fontWeight",
-        "letterSpacing",
-        "lineHeight"
-      ],
+      "required": ["fontFamily", "fontSize", "fontWeight", "letterSpacing", "lineHeight"],
       "properties": {
         "fontFamily": {
-          "oneOf": [
-            { "type": "string" },
-            { "type": "array", "items": { "type": "string" } }
-          ]
+          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
         },
         "fontSize": { "$ref": "#/definitions/dimension" },
         "fontWeight": { "type": "number" },

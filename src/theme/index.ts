@@ -8,10 +8,4 @@ export {
   spacingSemanticTokens,
   typographySemanticTokens,
 } from './tokens';
-export type {
-  DimensionValue,
-  ShadowValue,
-  Theme,
-  ThemeOverride,
-  TypographyValue,
-} from './types';
+export type { DimensionValue, ShadowValue, Theme, ThemeOverride, TypographyValue } from './types';

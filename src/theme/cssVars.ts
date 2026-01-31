@@ -7,13 +7,10 @@ import {
 } from './tokens';
 import type { DimensionValue, ShadowValue, TypographyValue } from './types';
 
-const dimensionToCss = (dimension: DimensionValue) =>
-  `${dimension.value}${dimension.unit}`;
+const dimensionToCss = (dimension: DimensionValue) => `${dimension.value}${dimension.unit}`;
 
 const fontFamilyToCss = (fontFamily: TypographyValue['fontFamily']) => {
-  const families: string[] = Array.isArray(fontFamily)
-    ? [...fontFamily]
-    : [fontFamily];
+  const families: string[] = Array.isArray(fontFamily) ? [...fontFamily] : [fontFamily];
   return families
     .map((family) => {
       if (family.startsWith('"') || family.startsWith("'")) {
@@ -33,9 +30,7 @@ const shadowToCss = (shadow: ShadowValue) => {
   const inset = shadow.inset ? 'inset ' : '';
   return `${inset}${dimensionToCss(shadow.offsetX)} ${dimensionToCss(
     shadow.offsetY,
-  )} ${dimensionToCss(shadow.blur)} ${dimensionToCss(shadow.spread)} ${
-    shadow.color
-  }`;
+  )} ${dimensionToCss(shadow.blur)} ${dimensionToCss(shadow.spread)} ${shadow.color}`;
 };
 
 export const themeToCssVars = (theme: Theme) => {
@@ -46,9 +41,7 @@ export const themeToCssVars = (theme: Theme) => {
   }
 
   for (const token of spacingSemanticTokens) {
-    vars[`--lt-spacing-${token}`] = dimensionToCss(
-      theme.spacing.semantic[token],
-    );
+    vars[`--lt-spacing-${token}`] = dimensionToCss(theme.spacing.semantic[token]);
   }
 
   for (const token of typographySemanticTokens) {
@@ -63,9 +56,7 @@ export const themeToCssVars = (theme: Theme) => {
   }
 
   for (const token of elevationSemanticTokens) {
-    vars[`--lt-elevation-${token}`] = shadowToCss(
-      theme.elevation.semantic[token],
-    );
+    vars[`--lt-elevation-${token}`] = shadowToCss(theme.elevation.semantic[token]);
   }
 
   return vars;

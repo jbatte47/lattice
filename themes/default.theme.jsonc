@@ -26,8 +26,8 @@
       "intent-warning": "#f2b01e",
       "intent-danger": "#e04f5f",
       "intent-info": "#2f6bff",
-      "text-on-intent": "#ffffff"
-    }
+      "text-on-intent": "#ffffff",
+    },
   },
   "spacing": {
     "semantic": {
@@ -39,8 +39,8 @@
       "space-stack-loose": { "value": 24, "unit": "px" },
       "space-inset-tight": { "value": 8, "unit": "px" },
       "space-inset-default": { "value": 16, "unit": "px" },
-      "space-inset-loose": { "value": 24, "unit": "px" }
-    }
+      "space-inset-loose": { "value": 24, "unit": "px" },
+    },
   },
   "typography": {
     "semantic": {
@@ -49,51 +49,51 @@
         "fontSize": { "value": 16, "unit": "px" },
         "fontWeight": 400,
         "letterSpacing": { "value": 0, "unit": "em" },
-        "lineHeight": 1.5
+        "lineHeight": 1.5,
       },
       "type-body-strong": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 16, "unit": "px" },
         "fontWeight": 600,
         "letterSpacing": { "value": 0, "unit": "em" },
-        "lineHeight": 1.5
+        "lineHeight": 1.5,
       },
       "type-caption": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 14, "unit": "px" },
         "fontWeight": 400,
         "letterSpacing": { "value": 0, "unit": "em" },
-        "lineHeight": 1.5
+        "lineHeight": 1.5,
       },
       "type-overline": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 12, "unit": "px" },
         "fontWeight": 500,
         "letterSpacing": { "value": 0.01, "unit": "em" },
-        "lineHeight": 1.2
+        "lineHeight": 1.2,
       },
       "type-heading-1": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 36, "unit": "px" },
         "fontWeight": 700,
         "letterSpacing": { "value": -0.01, "unit": "em" },
-        "lineHeight": 1.2
+        "lineHeight": 1.2,
       },
       "type-heading-2": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 30, "unit": "px" },
         "fontWeight": 600,
         "letterSpacing": { "value": -0.01, "unit": "em" },
-        "lineHeight": 1.2
+        "lineHeight": 1.2,
       },
       "type-heading-3": {
         "fontFamily": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
         "fontSize": { "value": 24, "unit": "px" },
         "fontWeight": 600,
         "letterSpacing": { "value": -0.01, "unit": "em" },
-        "lineHeight": 1.2
-      }
-    }
+        "lineHeight": 1.2,
+      },
+    },
   },
   "elevation": {
     "semantic": {
@@ -102,29 +102,29 @@
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 0, "unit": "px" },
         "blur": { "value": 0, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
+        "spread": { "value": 0, "unit": "px" },
       },
       "elevation-raised": {
         "color": "rgba(0, 0, 0, 0.1)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 1, "unit": "px" },
         "blur": { "value": 2, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
+        "spread": { "value": 0, "unit": "px" },
       },
       "elevation-overlay": {
         "color": "rgba(0, 0, 0, 0.1)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 3, "unit": "px" },
         "blur": { "value": 6, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
+        "spread": { "value": 0, "unit": "px" },
       },
       "elevation-modal": {
         "color": "rgba(0, 0, 0, 0.2)",
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 6, "unit": "px" },
         "blur": { "value": 12, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
-      }
-    }
-  }
+        "spread": { "value": 0, "unit": "px" },
+      },
+    },
+  },
 }
