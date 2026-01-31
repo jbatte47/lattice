@@ -157,7 +157,9 @@ function TokenPlayground({
       <section className={styles.grid}>
         <article className={styles.card}>
           <h3 className={styles.sectionTitle}>Layered surfaces</h3>
-          <p className={styles.meta}>Nested themes override background tokens without changing structure.</p>
+          <p className={styles.meta}>
+            Nested themes override background tokens without changing structure.
+          </p>
           <div className={styles.layerWrapper}>
             <div className={styles.layerSurface}>
               <strong>Base layer</strong>
@@ -172,7 +174,9 @@ function TokenPlayground({
 
         <article className={styles.card}>
           <h3 className={styles.sectionTitle}>Intent actions</h3>
-          <p className={styles.meta}>Intent tokens keep color semantics consistent across actions.</p>
+          <p className={styles.meta}>
+            Intent tokens keep color semantics consistent across actions.
+          </p>
           <div className={styles.buttonRow}>
             <button className={styles.button} type="button">
               Primary

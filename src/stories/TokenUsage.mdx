@@ -19,17 +19,13 @@ retarget when themes change.
 Correct (semantic token):
 
 ```tsx
-<div className="bg-surface-default text-primary">
-  ...
-</div>
+<div className="bg-surface-default text-primary">...</div>
 ```
 
 Incorrect (raw value):
 
 ```tsx
-<div style={{ background: '#ffffff', color: '#22252a' }}>
-  ...
-</div>
+<div style={{ background: '#ffffff', color: '#22252a' }}>...</div>
 ```
 
 ### Enforcement
@@ -45,9 +41,36 @@ Token groups map cleanly to CSS variables and Tailwind classes.
 <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '16px' }}>
   <thead>
     <tr style={{ borderBottom: '2px solid var(--lt-color-border-subtle)' }}>
-      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>Token intent</th>
-      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>CSS variable</th>
-      <th style={{ padding: '12px', textAlign: 'left', fontWeight: 'bold', color: 'var(--lt-color-text-primary)' }}>Tailwind class</th>
+      <th
+        style={{
+          padding: '12px',
+          textAlign: 'left',
+          fontWeight: 'bold',
+          color: 'var(--lt-color-text-primary)',
+        }}
+      >
+        Token intent
+      </th>
+      <th
+        style={{
+          padding: '12px',
+          textAlign: 'left',
+          fontWeight: 'bold',
+          color: 'var(--lt-color-text-primary)',
+        }}
+      >
+        CSS variable
+      </th>
+      <th
+        style={{
+          padding: '12px',
+          textAlign: 'left',
+          fontWeight: 'bold',
+          color: 'var(--lt-color-text-primary)',
+        }}
+      >
+        Tailwind class
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -81,17 +104,48 @@ Token groups map cleanly to CSS variables and Tailwind classes.
 
 ### Example usage
 
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '16px' }}>
-  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
-    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Surface</div>
-    <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>bg-surface-default</code>
+<div
+  style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '16px' }}
+>
+  <div
+    style={{
+      padding: '16px',
+      border: '1px solid var(--lt-color-border-subtle)',
+      borderRadius: '4px',
+      backgroundColor: 'var(--lt-color-bg-surface-default)',
+    }}
+  >
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>
+      Surface
+    </div>
+    <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>
+      bg-surface-default
+    </code>
   </div>
-  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
-    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Text</div>
+  <div
+    style={{
+      padding: '16px',
+      border: '1px solid var(--lt-color-border-subtle)',
+      borderRadius: '4px',
+      backgroundColor: 'var(--lt-color-bg-surface-default)',
+    }}
+  >
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>
+      Text
+    </div>
     <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>text-primary</code>
   </div>
-  <div style={{ padding: '16px', border: '1px solid var(--lt-color-border-subtle)', borderRadius: '4px', backgroundColor: 'var(--lt-color-bg-surface-default)' }}>
-    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>Border</div>
+  <div
+    style={{
+      padding: '16px',
+      border: '1px solid var(--lt-color-border-subtle)',
+      borderRadius: '4px',
+      backgroundColor: 'var(--lt-color-bg-surface-default)',
+    }}
+  >
+    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: 'var(--lt-color-text-primary)' }}>
+      Border
+    </div>
     <code style={{ fontSize: '12px', color: 'var(--lt-color-text-secondary)' }}>border-subtle</code>
   </div>
 </div>
