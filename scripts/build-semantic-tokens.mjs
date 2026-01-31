@@ -17,8 +17,7 @@ const categories = [
   { key: 'elevation', exportName: 'elevationSemanticTokens' },
 ];
 
-const formatArray = (items, indent = '  ') =>
-  items.map((item) => `${indent}'${item}',`).join('\n');
+const formatArray = (items, indent = '  ') => items.map((item) => `${indent}'${item}',`).join('\n');
 
 const jsLines = categories.map(({ key, exportName }) => {
   const items = data[key];
@@ -26,10 +25,7 @@ const jsLines = categories.map(({ key, exportName }) => {
     throw new Error(`Expected array for ${key}.`);
   }
 
-  return `/** @type {const} */\nexport const ${exportName} = [\n${formatArray(
-    items,
-    '  ',
-  )}\n];`;
+  return `/** @type {const} */\nexport const ${exportName} = [\n${formatArray(items, '  ')}\n];`;
 });
 
 const dtsLines = categories.map(({ key, exportName }) => {
@@ -38,10 +34,7 @@ const dtsLines = categories.map(({ key, exportName }) => {
     throw new Error(`Expected array for ${key}.`);
   }
 
-  return `export const ${exportName}: readonly [\n${formatArray(
-    items,
-    '  ',
-  )}\n];`;
+  return `export const ${exportName}: readonly [\n${formatArray(items, '  ')}\n];`;
 });
 
 await writeFile(jsPath, `${jsLines.join('\n\n')}\n`, 'utf8');

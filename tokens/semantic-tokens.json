@@ -45,10 +45,5 @@
     "type-heading-2",
     "type-heading-3"
   ],
-  "elevation": [
-    "elevation-flat",
-    "elevation-raised",
-    "elevation-overlay",
-    "elevation-modal"
-  ]
+  "elevation": ["elevation-flat", "elevation-raised", "elevation-overlay", "elevation-modal"]
 }

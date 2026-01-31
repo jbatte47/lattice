@@ -37,10 +37,7 @@ const intentColors = Object.fromEntries(
 );
 
 const fontFamily = Object.fromEntries(
-  typographySemanticTokens.map((token) => [
-    token,
-    toCssVar('typography', `${token}-font-family`),
-  ]),
+  typographySemanticTokens.map((token) => [token, toCssVar('typography', `${token}-font-family`)]),
 );
 
 const fontSize = Object.fromEntries(
