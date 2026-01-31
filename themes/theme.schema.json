@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lattice Theme",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["color", "spacing", "typography", "elevation"],
+  "properties": {
+    "color": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic"],
+      "properties": {
+        "semantic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text-primary",
+            "text-secondary",
+            "text-muted",
+            "text-disabled",
+            "text-inverse",
+            "bg-surface-default",
+            "bg-surface-muted",
+            "bg-surface-raised",
+            "bg-layer-0",
+            "bg-layer-1",
+            "bg-layer-2",
+            "bg-layer-3",
+            "border-subtle",
+            "border-strong",
+            "border-inverse",
+            "focus-ring",
+            "link-default",
+            "intent-primary",
+            "intent-primary-hover",
+            "intent-success",
+            "intent-warning",
+            "intent-danger",
+            "intent-info",
+            "text-on-intent"
+          ],
+          "properties": {
+            "text-primary": { "type": "string" },
+            "text-secondary": { "type": "string" },
+            "text-muted": { "type": "string" },
+            "text-disabled": { "type": "string" },
+            "text-inverse": { "type": "string" },
+            "bg-surface-default": { "type": "string" },
+            "bg-surface-muted": { "type": "string" },
+            "bg-surface-raised": { "type": "string" },
+            "bg-layer-0": { "type": "string" },
+            "bg-layer-1": { "type": "string" },
+            "bg-layer-2": { "type": "string" },
+            "bg-layer-3": { "type": "string" },
+            "border-subtle": { "type": "string" },
+            "border-strong": { "type": "string" },
+            "border-inverse": { "type": "string" },
+            "focus-ring": { "type": "string" },
+            "link-default": { "type": "string" },
+            "intent-primary": { "type": "string" },
+            "intent-primary-hover": { "type": "string" },
+            "intent-success": { "type": "string" },
+            "intent-warning": { "type": "string" },
+            "intent-danger": { "type": "string" },
+            "intent-info": { "type": "string" },
+            "text-on-intent": { "type": "string" }
+          }
+        }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic"],
+      "properties": {
+        "semantic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "space-inline-tight",
+            "space-inline-default",
+            "space-inline-loose",
+            "space-stack-tight",
+            "space-stack-default",
+            "space-stack-loose",
+            "space-inset-tight",
+            "space-inset-default",
+            "space-inset-loose"
+          ],
+          "properties": {
+            "space-inline-tight": { "$ref": "#/definitions/dimension" },
+            "space-inline-default": { "$ref": "#/definitions/dimension" },
+            "space-inline-loose": { "$ref": "#/definitions/dimension" },
+            "space-stack-tight": { "$ref": "#/definitions/dimension" },
+            "space-stack-default": { "$ref": "#/definitions/dimension" },
+            "space-stack-loose": { "$ref": "#/definitions/dimension" },
+            "space-inset-tight": { "$ref": "#/definitions/dimension" },
+            "space-inset-default": { "$ref": "#/definitions/dimension" },
+            "space-inset-loose": { "$ref": "#/definitions/dimension" }
+          }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic"],
+      "properties": {
+        "semantic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type-body",
+            "type-body-strong",
+            "type-caption",
+            "type-overline",
+            "type-heading-1",
+            "type-heading-2",
+            "type-heading-3"
+          ],
+          "properties": {
+            "type-body": { "$ref": "#/definitions/typography" },
+            "type-body-strong": { "$ref": "#/definitions/typography" },
+            "type-caption": { "$ref": "#/definitions/typography" },
+            "type-overline": { "$ref": "#/definitions/typography" },
+            "type-heading-1": { "$ref": "#/definitions/typography" },
+            "type-heading-2": { "$ref": "#/definitions/typography" },
+            "type-heading-3": { "$ref": "#/definitions/typography" }
+          }
+        }
+      }
+    },
+    "elevation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic"],
+      "properties": {
+        "semantic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "elevation-flat",
+            "elevation-raised",
+            "elevation-overlay",
+            "elevation-modal"
+          ],
+          "properties": {
+            "elevation-flat": { "$ref": "#/definitions/shadow" },
+            "elevation-raised": { "$ref": "#/definitions/shadow" },
+            "elevation-overlay": { "$ref": "#/definitions/shadow" },
+            "elevation-modal": { "$ref": "#/definitions/shadow" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit"],
+      "properties": {
+        "value": { "type": "number" },
+        "unit": { "type": "string" }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fontFamily", "fontSize", "fontWeight", "letterSpacing", "lineHeight"],
+      "properties": {
+        "fontFamily": {
+          "oneOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
+        },
+        "fontSize": { "$ref": "#/definitions/dimension" },
+        "fontWeight": { "type": "number" },
+        "letterSpacing": { "$ref": "#/definitions/dimension" },
+        "lineHeight": { "type": "number" }
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["color", "offsetX", "offsetY", "blur", "spread"],
+      "properties": {
+        "color": { "type": "string" },
+        "offsetX": { "$ref": "#/definitions/dimension" },
+        "offsetY": { "$ref": "#/definitions/dimension" },
+        "blur": { "$ref": "#/definitions/dimension" },
+        "spread": { "$ref": "#/definitions/dimension" },
+        "inset": { "type": "boolean" }
+      }
+    }
+  }
+}
