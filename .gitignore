@@ -181,3 +181,4 @@ sandbox/
 tokens/semantic-tokens.js
 tokens/semantic-tokens.d.ts
 storybook-static/
+.storybook-home/
