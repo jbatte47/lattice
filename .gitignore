@@ -178,3 +178,5 @@ sketch
 # Repo-specific Ignores
 
 sandbox/
+tokens/semantic-tokens.js
+tokens/semantic-tokens.d.ts

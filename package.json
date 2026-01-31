@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "build": "pnpm build:tsup && pnpm build:tokens",
     "build:tsup": "tsup",
-    "build:tokens": "node scripts/build-tokens-css.mjs",
+    "build:tokens": "node scripts/build-semantic-tokens.mjs && node scripts/build-tokens-css.mjs",
     "release": "semantic-release"
   },
   "type": "module",
