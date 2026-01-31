@@ -1,6 +1,6 @@
 /* global console */
+/* global URL */
 import { readFile, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const rootUrl = new URL('..', import.meta.url);
