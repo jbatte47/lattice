@@ -1,0 +1,219 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "typography": {
+    "global": {
+      "font-family-base": {
+        "$type": "fontFamily",
+        "$value": ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        "$description": "Base sans-serif stack placeholder."
+      },
+      "font-family-mono": {
+        "$type": "fontFamily",
+        "$value": ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        "$description": "Monospace stack placeholder."
+      },
+      "font-size-xs": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$description": "Extra small font size."
+      },
+      "font-size-sm": {
+        "$type": "dimension",
+        "$value": {
+          "value": 14,
+          "unit": "px"
+        },
+        "$description": "Small font size."
+      },
+      "font-size-md": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$description": "Base font size."
+      },
+      "font-size-lg": {
+        "$type": "dimension",
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        },
+        "$description": "Large font size."
+      },
+      "font-size-xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$description": "Extra large font size."
+      },
+      "font-size-2xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$description": "2XL font size."
+      },
+      "font-size-3xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 30,
+          "unit": "px"
+        },
+        "$description": "3XL font size."
+      },
+      "font-size-4xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 36,
+          "unit": "px"
+        },
+        "$description": "4XL font size."
+      },
+      "font-weight-regular": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "$description": "Regular font weight."
+      },
+      "font-weight-medium": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "$description": "Medium font weight."
+      },
+      "font-weight-semibold": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "$description": "Semibold font weight."
+      },
+      "font-weight-bold": {
+        "$type": "fontWeight",
+        "$value": 700,
+        "$description": "Bold font weight."
+      },
+      "letter-spacing-tight": {
+        "$type": "dimension",
+        "$value": {
+          "value": -0.01,
+          "unit": "em"
+        },
+        "$description": "Tight letter spacing."
+      },
+      "letter-spacing-normal": {
+        "$type": "dimension",
+        "$value": {
+          "value": 0,
+          "unit": "em"
+        },
+        "$description": "Normal letter spacing."
+      },
+      "letter-spacing-wide": {
+        "$type": "dimension",
+        "$value": {
+          "value": 0.01,
+          "unit": "em"
+        },
+        "$description": "Wide letter spacing."
+      },
+      "line-height-tight": {
+        "$type": "number",
+        "$value": 1.2,
+        "$description": "Tight line height."
+      },
+      "line-height-normal": {
+        "$type": "number",
+        "$value": 1.5,
+        "$description": "Normal line height."
+      },
+      "line-height-loose": {
+        "$type": "number",
+        "$value": 1.7,
+        "$description": "Loose line height."
+      }
+    },
+    "semantic": {
+      "type-body": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-md}",
+          "fontWeight": "{typography.global.font-weight-regular}",
+          "letterSpacing": "{typography.global.letter-spacing-normal}",
+          "lineHeight": "{typography.global.line-height-normal}"
+        },
+        "$description": "Default body text."
+      },
+      "type-body-strong": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-md}",
+          "fontWeight": "{typography.global.font-weight-semibold}",
+          "letterSpacing": "{typography.global.letter-spacing-normal}",
+          "lineHeight": "{typography.global.line-height-normal}"
+        },
+        "$description": "Emphasized body text."
+      },
+      "type-caption": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-sm}",
+          "fontWeight": "{typography.global.font-weight-regular}",
+          "letterSpacing": "{typography.global.letter-spacing-normal}",
+          "lineHeight": "{typography.global.line-height-normal}"
+        },
+        "$description": "Caption or helper text."
+      },
+      "type-overline": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-xs}",
+          "fontWeight": "{typography.global.font-weight-medium}",
+          "letterSpacing": "{typography.global.letter-spacing-wide}",
+          "lineHeight": "{typography.global.line-height-tight}"
+        },
+        "$description": "Overline or label text."
+      },
+      "type-heading-1": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-4xl}",
+          "fontWeight": "{typography.global.font-weight-bold}",
+          "letterSpacing": "{typography.global.letter-spacing-tight}",
+          "lineHeight": "{typography.global.line-height-tight}"
+        },
+        "$description": "Primary heading."
+      },
+      "type-heading-2": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-3xl}",
+          "fontWeight": "{typography.global.font-weight-semibold}",
+          "letterSpacing": "{typography.global.letter-spacing-tight}",
+          "lineHeight": "{typography.global.line-height-tight}"
+        },
+        "$description": "Secondary heading."
+      },
+      "type-heading-3": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.global.font-family-base}",
+          "fontSize": "{typography.global.font-size-2xl}",
+          "fontWeight": "{typography.global.font-weight-semibold}",
+          "letterSpacing": "{typography.global.letter-spacing-tight}",
+          "lineHeight": "{typography.global.line-height-tight}"
+        },
+        "$description": "Tertiary heading."
+      }
+    }
+  }
+}

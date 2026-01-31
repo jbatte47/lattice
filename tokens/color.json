@@ -1,0 +1,229 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "color": {
+    "global": {
+      "neutral-0": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "Neutral 0 (white)."
+      },
+      "neutral-50": {
+        "$type": "color",
+        "$value": "#f7f7f8",
+        "$description": "Neutral 50."
+      },
+      "neutral-100": {
+        "$type": "color",
+        "$value": "#eeeff1",
+        "$description": "Neutral 100."
+      },
+      "neutral-200": {
+        "$type": "color",
+        "$value": "#d9dbe0",
+        "$description": "Neutral 200."
+      },
+      "neutral-300": {
+        "$type": "color",
+        "$value": "#c3c6cc",
+        "$description": "Neutral 300."
+      },
+      "neutral-400": {
+        "$type": "color",
+        "$value": "#a9adb5",
+        "$description": "Neutral 400."
+      },
+      "neutral-500": {
+        "$type": "color",
+        "$value": "#8c919b",
+        "$description": "Neutral 500."
+      },
+      "neutral-600": {
+        "$type": "color",
+        "$value": "#6f7580",
+        "$description": "Neutral 600."
+      },
+      "neutral-700": {
+        "$type": "color",
+        "$value": "#555a63",
+        "$description": "Neutral 700."
+      },
+      "neutral-800": {
+        "$type": "color",
+        "$value": "#3b3f46",
+        "$description": "Neutral 800."
+      },
+      "neutral-900": {
+        "$type": "color",
+        "$value": "#22252a",
+        "$description": "Neutral 900."
+      },
+      "neutral-1000": {
+        "$type": "color",
+        "$value": "#0b0c0e",
+        "$description": "Neutral 1000 (near-black)."
+      },
+      "brand-500": {
+        "$type": "color",
+        "$value": "#3b6cff",
+        "$description": "Brand primary placeholder."
+      },
+      "brand-600": {
+        "$type": "color",
+        "$value": "#2f59d9",
+        "$description": "Brand primary hover/active placeholder."
+      },
+      "blue-500": {
+        "$type": "color",
+        "$value": "#2f6bff",
+        "$description": "Blue 500 placeholder for info intent."
+      },
+      "green-500": {
+        "$type": "color",
+        "$value": "#1f9d61",
+        "$description": "Green 500 placeholder for success intent."
+      },
+      "yellow-500": {
+        "$type": "color",
+        "$value": "#f2b01e",
+        "$description": "Yellow 500 placeholder for warning intent."
+      },
+      "red-500": {
+        "$type": "color",
+        "$value": "#e04f5f",
+        "$description": "Red 500 placeholder for danger intent."
+      },
+      "alpha-10": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0.1)",
+        "$description": "Neutral alpha for shadows and borders."
+      },
+      "alpha-20": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0.2)",
+        "$description": "Neutral alpha for deeper shadows."
+      }
+    },
+    "semantic": {
+      "text-primary": {
+        "$type": "color",
+        "$value": "{color.global.neutral-900}",
+        "$description": "Primary text on default surfaces."
+      },
+      "text-secondary": {
+        "$type": "color",
+        "$value": "{color.global.neutral-700}",
+        "$description": "Secondary text on default surfaces."
+      },
+      "text-muted": {
+        "$type": "color",
+        "$value": "{color.global.neutral-500}",
+        "$description": "Muted or de-emphasized text."
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.global.neutral-400}",
+        "$description": "Disabled text."
+      },
+      "text-inverse": {
+        "$type": "color",
+        "$value": "{color.global.neutral-0}",
+        "$description": "Text on inverse/dark surfaces."
+      },
+      "bg-surface-default": {
+        "$type": "color",
+        "$value": "{color.global.neutral-0}",
+        "$description": "Default background surface."
+      },
+      "bg-surface-muted": {
+        "$type": "color",
+        "$value": "{color.global.neutral-50}",
+        "$description": "Muted background surface."
+      },
+      "bg-surface-raised": {
+        "$type": "color",
+        "$value": "{color.global.neutral-0}",
+        "$description": "Raised surface (used with elevation)."
+      },
+      "bg-layer-0": {
+        "$type": "color",
+        "$value": "{color.semantic.bg-surface-default}",
+        "$description": "Layer 0 base surface."
+      },
+      "bg-layer-1": {
+        "$type": "color",
+        "$value": "{color.global.neutral-50}",
+        "$description": "Layer 1 surface for subtle separation."
+      },
+      "bg-layer-2": {
+        "$type": "color",
+        "$value": "{color.global.neutral-100}",
+        "$description": "Layer 2 surface for nested content."
+      },
+      "bg-layer-3": {
+        "$type": "color",
+        "$value": "{color.global.neutral-200}",
+        "$description": "Layer 3 surface for deep nesting or emphasis."
+      },
+      "border-subtle": {
+        "$type": "color",
+        "$value": "{color.global.neutral-200}",
+        "$description": "Subtle borders and dividers."
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.global.neutral-400}",
+        "$description": "High-contrast borders."
+      },
+      "border-inverse": {
+        "$type": "color",
+        "$value": "{color.global.neutral-700}",
+        "$description": "Borders on inverse surfaces."
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "{color.global.brand-500}",
+        "$description": "Focus ring for keyboard navigation."
+      },
+      "link-default": {
+        "$type": "color",
+        "$value": "{color.global.brand-500}",
+        "$description": "Default link color."
+      },
+      "intent-primary": {
+        "$type": "color",
+        "$value": "{color.global.brand-500}",
+        "$description": "Primary intent color."
+      },
+      "intent-primary-hover": {
+        "$type": "color",
+        "$value": "{color.global.brand-600}",
+        "$description": "Primary intent hover/active color."
+      },
+      "intent-success": {
+        "$type": "color",
+        "$value": "{color.global.green-500}",
+        "$description": "Success intent color."
+      },
+      "intent-warning": {
+        "$type": "color",
+        "$value": "{color.global.yellow-500}",
+        "$description": "Warning intent color."
+      },
+      "intent-danger": {
+        "$type": "color",
+        "$value": "{color.global.red-500}",
+        "$description": "Danger intent color."
+      },
+      "intent-info": {
+        "$type": "color",
+        "$value": "{color.global.blue-500}",
+        "$description": "Info intent color."
+      },
+      "text-on-intent": {
+        "$type": "color",
+        "$value": "{color.global.neutral-0}",
+        "$description": "Text on intent-colored surfaces."
+      }
+    }
+  }
+}
