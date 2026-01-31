@@ -195,3 +195,54 @@ function gh_commit_issue() {
   git add -A
   git commit -m "${type}(${scope}): ${description} Fixes #${issue_number}"
 }
+
+# Create a PR from the current branch and move the issue to "In Review".
+# Usage: gh_pr_create_and_mark_review <issue_number> <type> <scope> <description> [repo_name] [owner]
+# Example: gh_pr_create_and_mark_review 12 docs storybook "add storybook docs and token playground"
+function gh_pr_create_and_mark_review() {
+  local issue_number=${1:?issue number required}
+  local type=${2:?type required}
+  local scope=${3:?scope required}
+  local description=${4:?description required}
+  local repo_name=${5:-lattice}
+  local owner=${6:-}
+
+  if [[ -z "${owner}" ]]; then
+    owner="$(gh_me_login)"
+  fi
+
+  local branch
+  branch="$(git branch --show-current)"
+  if [[ -z "${branch}" ]]; then
+    echo "No current branch detected." >&2
+    return 1
+  fi
+
+  if [[ -n "$(git status --porcelain)" ]]; then
+    echo "Working tree is dirty. Commit changes before creating PR." >&2
+    return 1
+  fi
+
+  local pr_title="${type}(${scope}): ${description}"
+  local pr_body
+  pr_body=$(
+    cat <<EOF
+## Summary
+- ${description}
+
+## Testing
+- pnpm build-storybook
+
+Fixes #${issue_number}
+EOF
+  )
+
+  gh pr create \
+    --title "${pr_title}" \
+    --body "${pr_body}" \
+    --base main \
+    --head "${branch}" \
+    --repo "${owner}/${repo_name}"
+
+  gh_issue_set_project_status "${issue_number}" "${repo_name}" "${owner}" "Lattice" "In Review"
+}
