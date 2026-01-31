@@ -138,6 +138,13 @@ PR descriptions must follow this format and include the issue link that will be 
 Fixes #<issue-number>
 ```
 
+### Pull Request Title
+
+PR titles must use Conventional Commit format. When we squash merge, the PR title becomes the commit subject, which drives semantic-release.
+
+- **Pattern**: `<type>(<scope>): <description>`
+- **Example**: `feat(tokens): generate tokens.css at build time`
+
 ### Tooling (Lint + Format)
 
 Lattice uses `pnpm` and a repo-wide ESLint + Prettier setup.
