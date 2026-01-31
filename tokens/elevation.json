@@ -1,0 +1,121 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "elevation": {
+    "global": {
+      "shadow-none": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0, 0, 0, 0)",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 0,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 0,
+            "unit": "px"
+          },
+          "spread": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        "$description": "No shadow."
+      },
+      "shadow-1": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0, 0, 0, 0.1)",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 1,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 2,
+            "unit": "px"
+          },
+          "spread": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        "$description": "Low elevation shadow."
+      },
+      "shadow-2": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0, 0, 0, 0.1)",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 3,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 6,
+            "unit": "px"
+          },
+          "spread": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        "$description": "Mid elevation shadow."
+      },
+      "shadow-3": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0, 0, 0, 0.2)",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 6,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 12,
+            "unit": "px"
+          },
+          "spread": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        "$description": "High elevation shadow."
+      }
+    },
+    "semantic": {
+      "elevation-flat": {
+        "$type": "shadow",
+        "$value": "{elevation.global.shadow-none}",
+        "$description": "Flat surfaces without elevation."
+      },
+      "elevation-raised": {
+        "$type": "shadow",
+        "$value": "{elevation.global.shadow-1}",
+        "$description": "Raised surfaces like cards or panels."
+      },
+      "elevation-overlay": {
+        "$type": "shadow",
+        "$value": "{elevation.global.shadow-2}",
+        "$description": "Overlays like popovers or menus."
+      },
+      "elevation-modal": {
+        "$type": "shadow",
+        "$value": "{elevation.global.shadow-3}",
+        "$description": "Modal or highest-priority overlays."
+      }
+    }
+  }
+}
