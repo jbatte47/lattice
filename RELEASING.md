@@ -11,6 +11,7 @@ Lattice releases are fully automated via semantic-release. Any commit merged int
 - npm trusted publishing is configured for the package.
 - The release workflow has `id-token: write` permission.
 - npm CLI >= 11.5.1 is available in CI for OIDC publishing.
+- `package.json` includes a `repository.url` matching the GitHub repo for provenance checks.
 
 ## Workflow
 
