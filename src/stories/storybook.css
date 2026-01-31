@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--lt-color-bg-layer-0);
+  color: var(--lt-color-text-primary);
+  font-family: var(--lt-typography-type-body-font-family);
+}
+
+.sbdocs-wrapper {
+  background: var(--lt-color-bg-layer-0);
+  color: var(--lt-color-text-primary);
+}
+
+.token-demo {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 16px 0;
+}
+
+.token-swatch {
+  border-radius: 12px;
+  border: 1px solid var(--lt-color-border-subtle);
+  background: var(--lt-color-bg-surface-default);
+  padding: 12px;
+  box-shadow: var(--lt-elevation-elevation-raised);
+}
+
+.token-swatch strong {
+  display: block;
+  margin-bottom: 6px;
+}
