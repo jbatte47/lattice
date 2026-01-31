@@ -1,0 +1,49 @@
+{
+  "color": [
+    "text-primary",
+    "text-secondary",
+    "text-muted",
+    "text-disabled",
+    "text-inverse",
+    "bg-surface-default",
+    "bg-surface-muted",
+    "bg-surface-raised",
+    "bg-layer-0",
+    "bg-layer-1",
+    "bg-layer-2",
+    "bg-layer-3",
+    "border-subtle",
+    "border-strong",
+    "border-inverse",
+    "focus-ring",
+    "link-default",
+    "intent-primary",
+    "intent-primary-hover",
+    "intent-success",
+    "intent-warning",
+    "intent-danger",
+    "intent-info",
+    "text-on-intent"
+  ],
+  "spacing": [
+    "space-inline-tight",
+    "space-inline-default",
+    "space-inline-loose",
+    "space-stack-tight",
+    "space-stack-default",
+    "space-stack-loose",
+    "space-inset-tight",
+    "space-inset-default",
+    "space-inset-loose"
+  ],
+  "typography": [
+    "type-body",
+    "type-body-strong",
+    "type-caption",
+    "type-overline",
+    "type-heading-1",
+    "type-heading-2",
+    "type-heading-3"
+  ],
+  "elevation": ["elevation-flat", "elevation-raised", "elevation-overlay", "elevation-modal"]
+}

@@ -106,6 +106,15 @@ Lattice is currently in early development. APIs, component sets, and conventions
 
 ## Development & Contribution
 
+### Getting Started
+
+Run the build once before your first typecheck so Tailwind + types have the generated token artifacts available.
+
+```
+pnpm install
+pnpm build
+```
+
 ### Branch Management
 
 We follow **Trunk-Based Development**. All development happens in short-lived feature branches that are merged into `main` after review.

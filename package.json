@@ -8,9 +8,8 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "build": "pnpm build:tsup && pnpm build:tokens",
+    "build": "node scripts/build-semantic-tokens.mjs && pnpm build:tsup && node scripts/build-tokens-css.mjs",
     "build:tsup": "tsup",
-    "build:tokens": "node scripts/build-tokens-css.mjs",
     "release": "semantic-release"
   },
   "type": "module",
@@ -22,6 +21,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./tailwind-preset": {
+      "types": "./dist/tailwind/preset.d.ts",
+      "import": "./dist/tailwind/preset.js",
+      "require": "./dist/tailwind/preset.cjs"
     }
   },
   "files": [
