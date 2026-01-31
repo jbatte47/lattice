@@ -8,7 +8,9 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "build": "tsup",
+    "build": "pnpm build:tsup && pnpm build:tokens",
+    "build:tsup": "tsup",
+    "build:tokens": "node scripts/build-tokens-css.mjs",
     "release": "semantic-release"
   },
   "type": "module",
