@@ -7,7 +7,9 @@
     "lint:fix": "pnpm lint -- --fix",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "node scripts/build-semantic-tokens.mjs && tsc --noEmit",
+    "verify": "pnpm lint && pnpm format && pnpm typecheck",
+    "prepare": "husky install",
     "build": "node scripts/build-semantic-tokens.mjs && pnpm build:tsup && node scripts/build-tokens-css.mjs",
     "build:tsup": "tsup",
     "storybook": "pnpm build && storybook dev -p 6006",
@@ -44,16 +46,16 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.15.0",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/github": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^13.0.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
     "@storybook/blocks": "^8.0.0",
     "@storybook/react": "^8.0.0",
     "@storybook/react-vite": "^8.0.0",
-    "@semantic-release/commit-analyzer": "^12.0.0",
-    "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/github": "^10.0.4",
-    "@semantic-release/release-notes-generator": "^13.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
@@ -62,7 +64,9 @@
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
     "postcss": "^8.4.0",
     "prettier": "^3.3.3",
     "react": "^18.2.0",
@@ -73,5 +77,14 @@
     "tsup": "^8.3.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,md,mdx,json,yaml,yml}": [
+      "prettier --write"
+    ]
   }
 }
