@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{r as t}from"./index-DwQS_Y10.js";import{a as o,d as a}from"./defaultTheme-D2BQMkpl.js";const s=e=>(t.useEffect(()=>{o(a)},[]),r.jsx(e,{})),f={decorators:[s],parameters:{controls:{expanded:!0},layout:"fullscreen"}};export{f as default};
